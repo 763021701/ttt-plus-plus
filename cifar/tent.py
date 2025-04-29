@@ -101,9 +101,9 @@ if args.tsne:
     args_src = copy.deepcopy(args)
     args_src.corruption = 'original'
     _, srcloader = prepare_test_data(args_src)
-    feat_src, label_src = visu_feat(ext, srcloader, os.path.join(args.outf, 'original.pdf'))
+    feat_src, label_src, _ = visu_feat(ext, srcloader, os.path.join(args.outf, 'original.pdf'))
 
-    feat_tar, label_tar = visu_feat(ext, teloader, os.path.join(args.outf, args.corruption + '_test_class.pdf'))
+    feat_tar, label_tar, _ = visu_feat(ext, teloader, os.path.join(args.outf, args.corruption + '_test_class.pdf'))
     comp_feat(feat_src, label_src, feat_tar, label_tar, os.path.join(args.outf, args.corruption + '_test_marginal.pdf'))
 
 all_err_cls = []
@@ -155,7 +155,7 @@ else:
     raise NotImplementedError
 
 if args.tsne:
-    feat_tar, label_tar = visu_feat(ext, teloader, prefix+'_class.pdf')
+    feat_tar, label_tar, _ = visu_feat(ext, teloader, prefix+'_class.pdf')
     comp_feat(feat_src, label_src, feat_tar, label_tar, prefix+'_marginal.pdf')
 
 # -------------------------------

@@ -24,7 +24,7 @@ fi
 
 
 LR=0.001
-BS_BNM=256
+BS_BNM=128
 
 echo 'DATASET: '${DATASET}
 echo 'CORRUPT: '${CORRUPT}
@@ -46,5 +46,5 @@ python bnm.py \
 	--workers 12 \
 	--batch_size ${BS_BNM} \
 	--lr ${LR} \
-	--num_sample ${NSAMPLE}
-	# --tsne
+	--num_sample ${NSAMPLE} \
+	--tsne

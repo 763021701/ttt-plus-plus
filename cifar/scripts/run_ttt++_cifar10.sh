@@ -63,5 +63,5 @@ python ttt++.py \
 	--divergence ${DIVERGENCE} \
 	--align_ssh \
 	--align_ext \
-	--num_sample ${NSAMPLE}
-	# --tsne
+	--num_sample ${NSAMPLE} \
+	--tsne

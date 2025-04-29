@@ -46,5 +46,5 @@ python tent.py \
 	--workers 36 \
 	--batch_size ${BS_TENT} \
 	--lr ${LR} \
-	--num_sample ${NSAMPLE}
-	# --tsne
+	--num_sample ${NSAMPLE} \
+	--tsne
